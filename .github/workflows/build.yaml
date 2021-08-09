@@ -17,8 +17,8 @@ jobs:
     - name: Setup java
       uses: actions/setup-java@v2.2.0
       with:
-        distribution: 'adopt'
-        java-version: '11'
+        distribution: temurin
+        java-version: 11
         overwrite-settings: false
 
     - name: Set up Maven
