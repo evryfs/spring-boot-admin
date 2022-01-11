@@ -41,7 +41,7 @@ jobs:
     - name: Run build
       run: mvn clean deploy -Ddocker.registry=quay.io
 
-    - name: output tag
+    - name: app-version
       run: echo "::set-output name=version::$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)"
 
   test:
