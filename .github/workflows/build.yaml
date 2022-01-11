@@ -56,4 +56,4 @@ jobs:
 
     - name: install image
       run: |
-        helm install test spring-boot-admin --repo https://evryfs.github.io/helm-charts/ --set image.tag=${{ needs.build.outputs.app-version }}
+        helm install test spring-boot-admin --wait --repo https://evryfs.github.io/helm-charts/ --set image.tag=${{ needs.build.outputs.app-version }}
