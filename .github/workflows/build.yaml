@@ -40,3 +40,7 @@ jobs:
     - name: Run build
       run: |
         mvn clean deploy -Ddocker.registry=quay.io
+
+    - name: test image
+      run: |
+        timeout docker run --rm evryfs/spring-boot-admin:$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)
