@@ -4,5 +4,4 @@ ARG VERSION
 WORKDIR /app
 COPY maven/ /app/
 # JAVA_OPTS can be used to pass any additional system properties from env vars
-# base image is BusyBox-based and has no bash, so use sh; exec lets java receive signals
 CMD ["sh", "-c", "exec java ${DEFAULT_JAVA_OPTIONS} ${JAVA_OPTS} -jar spring-boot-admin.jar"]
